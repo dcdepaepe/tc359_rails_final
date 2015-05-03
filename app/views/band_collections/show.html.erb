@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Band name:</strong>
+  <%= @band_collection.band_name %>
+</p>
+
+<p>
+  <strong>Number of albums:</strong>
+  <%= @band_collection.number_of_albums %>
+</p>
+
+<p>
+  <strong>Seen in concert:</strong>
+  <%= @band_collection.seen_in_concert %>
+</p>
+
+<%= link_to 'Edit', edit_band_collection_path(@band_collection) %> |
+<%= link_to 'Back', band_collections_path %>

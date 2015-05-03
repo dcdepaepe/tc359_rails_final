@@ -1,0 +1,2 @@
+module BandCollectionsHelper
+end

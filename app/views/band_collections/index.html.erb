@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Band Collections</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Band name</th>
+      <th>Number of albums</th>
+      <th>Seen in concert</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @band_collections.each do |band_collection| %>
+      <tr>
+        <td><%= band_collection.band_name %></td>
+        <td><%= band_collection.number_of_albums %></td>
+        <td><%= band_collection.seen_in_concert %></td>
+        <td><%= link_to 'Show', band_collection %></td>
+        <td><%= link_to 'Edit', edit_band_collection_path(band_collection) %></td>
+        <td><%= link_to 'Destroy', band_collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Band collection', new_band_collection_path %>
